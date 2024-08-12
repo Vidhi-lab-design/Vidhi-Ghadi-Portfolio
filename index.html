@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Vidhi Ghadi - Portfolio</title>
     <style>
         body {
             margin: 0;
@@ -21,6 +21,23 @@
             padding: 20px;
         }
 
+        .contact-info {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            text-align: right;
+            color: white;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
         .profile {
             display: flex;
             align-items: center;
@@ -31,11 +48,14 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            width: 100%;
+            position: relative;
         }
 
         .photo {
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             margin-right: 20px;
             animation: dropIn 1s ease-out forwards;
@@ -43,16 +63,24 @@
 
         .info {
             text-align: left;
+            flex: 1;
         }
 
         .info h1 {
             margin: 0;
             font-weight: bold;
             color: white;
+            font-size: 36px;
         }
 
-        .bio {
-            margin: 10px 0 0;
+        .info h2 {
+            margin-top: 0;
+            color: white;
+            font-size: 24px;
+        }
+
+        .bio, .experience {
+            margin: 10px 0;
             color: white;
         }
 
@@ -76,7 +104,7 @@
             background-color: #333;
         }
 
-        .skills {
+        .skills, .experience {
             width: 100%;
             background-color: white;
             padding: 20px;
@@ -86,23 +114,38 @@
             text-align: center;
         }
 
-        .skills h2 {
+        .skills h2, .experience h2 {
             margin-top: 0;
             color: #f6c1c1; /* Match the baby pink */
         }
 
-        .skills-list {
+        .skills-list, .experience-list {
             list-style-type: none;
             padding: 0;
             margin: 0;
         }
 
-        .skills-list li {
+        .skills-list li, .experience-list li {
             background-color: #f6c1c1; /* Light baby pink */
             margin: 5px 0;
             padding: 10px;
             border-radius: 5px;
             color: white;
+        }
+
+        .social-media {
+            margin-top: 20px;
+        }
+
+        .social-media a {
+            margin: 0 10px;
+            color: black;
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        .social-media a:hover {
+            color: #333;
         }
 
         @keyframes fadeIn {
@@ -118,17 +161,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="contact-info">
+        <p>Email: <a href="mailto:ghadividhi79@gmail.com">your-email@example.com</a></p>
+    </div>
     <div class="container">
         <div class="profile">
-            <img src="image/self image.jpg" alt="Your Photo" class="photo">
+            <img src="self.jpg" class="photo" alt="Profile Photo">
             <div class="info">
                 <h1>Vidhi Ghadi</h1>
+                <h2>About Me</h2>
                 <p class="bio">Hello! I’m Vidhi Ghadi, a proven ability to learn from scratch and achieve outstanding results. My educational journey, culminating in an M.Sc. in Economics with a focus on Data Analytics, has been complemented by practical experience through diverse internships. I excel in problem-solving, thrive in team environments, and am adept at managing multiple tasks simultaneously. My hands-on experiences range from content writing and business development to administrative roles, all of which have honed my analytical and communication skills. I’m passionate about leveraging data to drive insights and am committed to continuous learning and growth. Welcome to my portfolio, where you can explore my projects, skills, and accomplishments.</p>
+                <div class="links">
+                    <a href="https://drive.google.com/file/d/1wq-_rd9bxAPZN1juUETCABypL3GF7crX/view?usp=drive_link" class="link">Resume</a>
+                    <a href="your-projects.html" class="link">Projects</a>
+                </div>
             </div>
         </div>
-        <div class="links">
-            <a href="https://drive.google.com/file/d/1wq-_rd9bxAPZN1juUETCABypL3GF7crX/view?usp=drive_link" class="link">Resume</a>
-            <a href="your-projects.html" class="link">Projects</a>
+        <div class="Internships">
+            <h2>Experience</h2>
+            <ul class="Internships">
+                <li>Administration and Operations Intern at Maharashtra Economic Development Council</li>
+                <li>Content Writer and Social Media Head Intern - Healing Anonmously</li>
+                <li>Business Development Intern - UnSchool</li>
+            </ul>
         </div>
         <div class="skills">
             <h2>Skills</h2>
@@ -139,6 +194,10 @@
                 <li>Problem Solving</li>
                 <li>Team Collaboration</li>
             </ul>
+        </div>
+        <div class="social-media">
+            <a href="https://www.instagram.com/vidhuarca/" target="_blank">Instagram</a>
+            <a href="https://www.linkedin.com/in/vidhi-ghadi-7b1471251/" target="_blank">LinkedIn</a>
         </div>
     </div>
 </body>
