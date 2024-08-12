@@ -38,6 +38,13 @@
             text-decoration: underline;
         }
 
+        .contact-info img {
+            width: 16px;
+            height: 16px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
         .profile {
             display: flex;
             align-items: center;
@@ -75,13 +82,13 @@
 
         .info h2 {
             margin-top: 0;
-            color: white;
+            color: black;
             font-size: 24px;
         }
 
-        .bio, .experience {
+        .bio {
             margin: 10px 0;
-            color: white;
+            color: black;
         }
 
         .links {
@@ -106,17 +113,19 @@
 
         .skills, .experience {
             width: 100%;
-            background-color: white;
+            background-color: black;
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             margin-top: 20px;
             text-align: center;
+            color: white;
         }
 
         .skills h2, .experience h2 {
             margin-top: 0;
             color: #f6c1c1; /* Match the baby pink */
+            text-transform: uppercase;
         }
 
         .skills-list, .experience-list {
@@ -148,6 +157,10 @@
             color: #333;
         }
 
+        .social-media i {
+            font-size: 24px;
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -162,11 +175,11 @@
 </head>
 <body>
     <div class="contact-info">
-        <p>Email: <a href="mailto:ghadividhi79@gmail.com">your-email@example.com</a></p>
+        <p>Contact: <a href="mailto:ghadividhi79@gmail.com"><img src="https://img.icons8.com/ios/50/000000/email.png" alt="Mail Icon"> ghadividhi79@gmail.com</a></p>
     </div>
     <div class="container">
         <div class="profile">
-            <img src="self.jpg" class="photo" alt="Profile Photo">
+            <img src="self.jpg" width="400" height="500">
             <div class="info">
                 <h1>Vidhi Ghadi</h1>
                 <h2>About Me</h2>
@@ -177,9 +190,9 @@
                 </div>
             </div>
         </div>
-        <div class="Internships">
+        <div class="experience">
             <h2>Experience</h2>
-            <ul class="Internships">
+            <ul class="experience-list">
                 <li>Administration and Operations Intern at Maharashtra Economic Development Council</li>
                 <li>Content Writer and Social Media Head Intern - Healing Anonmously</li>
                 <li>Business Development Intern - UnSchool</li>
@@ -196,8 +209,12 @@
             </ul>
         </div>
         <div class="social-media">
-            <a href="https://www.instagram.com/vidhuarca/" target="_blank">Instagram</a>
-            <a href="https://www.linkedin.com/in/vidhi-ghadi-7b1471251/" target="_blank">LinkedIn</a>
+            <a href="https://www.instagram.com/vidhuarca/" target="_blank">
+                <img src="https://img.icons8.com/ios/50/000000/instagram-new.png" alt="Instagram Icon">
+            </a>
+            <a href="https://www.linkedin.com/in/vidhi-ghadi-7b1471251/" target="_blank">
+                <img src="https://img.icons8.com/ios/50/000000/linkedin.png" alt="LinkedIn Icon">
+            </a>
         </div>
     </div>
 </body>
