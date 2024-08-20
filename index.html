@@ -3,220 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vidhi Ghadi - Portfolio</title>
+    <title>Portfolio</title>
     <style>
         body {
             margin: 0;
-            padding: 0;
-            font-family: 'Roboto Slab', serif;
-            background-color: #f6c1c1; /* Light baby pink */
-            overflow-x: hidden; /* Prevent horizontal scroll */
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            height: 100vh;
         }
 
-        .container {
+        .left-section {
+            background-color: #F2D7D5; /* Nude color */
+            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 20px;
+        }
+
+        .left-section img {
+            width: 80%;
+            border-radius: 50%;
+            background-color: white;
+            padding: 10px;
+        }
+
+        .right-section {
+            background-color: #FFFFFF;
+            width: 60%;
+            padding: 40px;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
+            justify-content: center;
         }
 
-        .contact-info {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            text-align: right;
-            color: white;
-        }
-
-        .contact-info a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-
-        .contact-info img {
-            width: 16px;
-            height: 16px;
-            vertical-align: middle;
-            margin-right: 5px;
-        }
-
-        .profile {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            opacity: 0;
-            animation: fadeIn 1s ease-out forwards, dropIn 1s ease-out forwards;
-            background-color: #f6c1c1; /* Ensure background color matches */
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 900px;
-            width: 100%;
-            position: relative;
-        }
-
-        .photo {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            margin-right: 20px;
-            animation: dropIn 1s ease-out forwards;
-        }
-
-        .info {
-            text-align: left;
-            flex: 1;
-        }
-
-        .info h1 {
-            margin: 0;
-            font-weight: bold;
-            color: black; /* Changed to black */
-            font-size: 36px;
-            text-decoration: underline; /* Underlined */
-        }
-
-        .info h2 {
-            margin-top: 0;
-            color: black;
-            font-size: 24px;
+        .name {
+            font-size: 3em;
+            font-style: italic;
+            margin-bottom: 10px;
         }
 
         .bio {
-            margin: 10px 0;
-            color: black;
+            font-size: 1.5em;
+            margin-bottom: 20px;
         }
 
-        .links {
-            margin-top: 20px;
+        .tabs {
+            margin-top: 30px;
         }
 
-        .link {
+        .tabs a {
             display: inline-block;
-            margin: 10px;
+            margin-right: 20px;
+            font-size: 1.2em;
+            color: #000000;
+            text-decoration: none;
             padding: 10px 20px;
-            text-decoration: none;
-            color: white;
-            background-color: black;
             border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
+            background-color: #F2D7D5; /* Nude color */
+            transition: background-color 0.3s;
         }
 
-        .link:hover {
-            background-color: #333;
+        .tabs a:hover {
+            background-color: #D5B7B5; /* Darker nude color */
         }
 
-        .skills, .experience {
-            width: 100%;
-            background-color: #f0f0f0; /* Light grey */
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            margin-top: 20px;
-            text-align: center;
-            color: black; /* Text color changed to black */
+        .contact {
+            margin-top: 50px;
+            font-size: 1.2em;
         }
 
-        .skills h2, .experience h2 {
-            margin-top: 0;
-            color: #f6c1c1; /* Match the baby pink */
-            text-transform: uppercase;
-        }
-
-        .skills-list, .experience-list {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .skills-list li, .experience-list li {
-            background-color: #f6c1c1; /* Light baby pink */
-            margin: 5px 0;
-            padding: 10px;
-            border-radius: 5px;
-            color: white;
-        }
-
-        .social-media {
-            margin-top: 20px;
-        }
-
-        .social-media a {
-            margin: 0 10px;
-            color: black;
+        .contact a {
+            margin-right: 15px;
             text-decoration: none;
-            font-size: 24px;
         }
 
-        .social-media a:hover {
-            color: #333;
-        }
-
-        .social-media i {
-            font-size: 24px;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes dropIn {
-            from { transform: translateY(-100px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+        .contact img {
+            width: 30px;
+            vertical-align: middle;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="contact-info">
-        <p>Contact: <a href="mailto:ghadividhi79@gmail.com"><img src="https://img.icons8.com/ios/50/000000/email.png" alt="Mail Icon"> ghadividhi79@gmail.com</a></p>
+
+    <div class="left-section">
+        <img src="self.jpg" alt="Your Photo">
+        <!-- Add a suitable illustration here -->
     </div>
-    <div class="container">
-        <div class="profile">
-            <img src="self.jpg" width="250" height="300" alt="Profile Photo">
-            <div class="info">
-                <h1>Vidhi Ghadi</h1>
-                <h2>About Me</h2>
-                <p class="bio">Hello! I’m Vidhi Ghadi, a proven ability to learn from scratch and achieve outstanding results. My educational journey, culminating in an M.Sc. in Economics with a focus on Data Analytics, has been complemented by practical experience through diverse internships. I excel in problem-solving, thrive in team environments, and am adept at managing multiple tasks simultaneously. My hands-on experiences range from content writing and business development to administrative roles, all of which have honed my analytical and communication skills. I’m passionate about leveraging data to drive insights and am committed to continuous learning and growth. Welcome to my portfolio, where you can explore my projects, skills, and accomplishments.</p>
-                <div class="links">
-                    <a href="https://drive.google.com/file/d/1wq-_rd9bxAPZN1juUETCABypL3GF7crX/view?usp=drive_link" class="link">Resume</a>
-                    <a href="your-projects.html" class="link">Projects</a>
-                </div>
-            </div>
+
+    <div class="right-section">
+        <div class="name">Vidhi Ghadi</div>
+        <div class="bio">Hello! I’m Vidhi Ghadi, a proven ability to learn from scratch and achieve outstanding results. My educational journey, culminating in an M.Sc. in Economics with a focus on Data Analytics, has been complemented by practical experience through diverse internships. I excel in problem-solving, thrive in team environments, and am adept at managing multiple tasks simultaneously. My hands-on experiences range from content writing and business development to administrative roles, all of which have honed my analytical and communication skills. I’m passionate about leveraging data to drive insights and am committed to continuous learning and growth. Welcome to my portfolio, where you can explore my projects, skills, and accomplishments..</div>
+        
+        <div class="tabs">
+            <a href="#">Resume</a>
+            <a href="#">Projects</a>
+            <a href="#">Internships</a>
+            <a href="#">Experience</a>
+            <a href="#">Skills</a>
         </div>
-        <div class="experience">
-            <h2>Experience</h2>
-            <ul class="experience-list">
-                <li>Administration and Operations Intern at Maharashtra Economic Development Council</li>
-                <li>Content Writer and Social Media Head Intern - Healing Anonmously</li>
-                <li>Business Development Intern - UnSchool</li>
-            </ul>
-        </div>
-        <div class="skills">
-            <h2>Skills</h2>
-            <ul class="skills-list">
-                <li>Data Analysis, Excel, Tableau, Python, R</li>
-                <li>Content Writing, Presentation, Public Speaking</li>
-                <li>Business Development</li>
-                <li>Problem Solving</li>
-                <li>Team Collaboration</li>
-            </ul>
-        </div>
-        <div class="social-media">
-            <a href="https://www.instagram.com/vidhuarca/" target="_blank">
-                <img src="https://img.icons8.com/ios/50/000000/instagram-new.png" alt="Instagram Icon">
-            </a>
-            <a href="https://www.linkedin.com/in/vidhi-ghadi-7b1471251/" target="_blank">
-                <img src="https://img.icons8.com/ios/50/000000/linkedin.png" alt="LinkedIn Icon">
-            </a>
+        
+        <div class="contact">
+            Contact: 
+            <a href="ghadividhi79@gmail.com"><img src="email-icon.png" alt="Email"></a>
+            <a href="https://www.linkedin.com/in/vidhi-ghadi-7b1471251"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+            <a href="https://www.instagram.com/vidhuarca/"instagram-icon.png" alt="Instagram"></a>
         </div>
     </div>
+
 </body>
 </html>
